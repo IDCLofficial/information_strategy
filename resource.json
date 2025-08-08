@@ -1,0 +1,184 @@
+{
+    "Home": {
+      "header_navigation": {
+        "logo_title": "Imo State Ministry Of Information, Public Orientation and Strategy",
+        "main_menu": [
+          "Home",
+          "About Us",
+          "Departments",
+          "Services",
+          "Contact Us"
+        ]
+      },
+      "hero_banner_slides": {
+        "description": "Several rotating banners featuring:",
+        "backgrounds": [
+          "Image of the physical structure of the ministry",
+          "Image of the governor",
+          "Image of the commissioner"
+        ],
+        "welcome_statement": {
+          "vision": "A digitally empowered and media-literate society driven by transparent government communication.",
+          "mission": "To bridge the information gap between the government and citizens through responsible journalism, public awareness, and strategic messaging."
+        }
+      },
+      "commissioner_section": {
+        "name": "Hon. Declan Emelumba",
+        "title": "Commissioner and Chief Strategist",
+        "welcome_statement": "Welcome to the Imo State Ministry of Information, Public Orientation and Strategy. I am Hon. Declan Emelumba, Commissioner and Chief Strategist, committed to delivering transparent, timely, and accurate communication on behalf of our government. Under Governor Hope Uzodimma's leadership, our mandate is to ensure public awareness of policies and programs, empower media professionals for ethical journalism, and foster a collaborative civic environment where every citizen is informed and engaged."
+      },
+      "news_feed": {
+        "description": "Latest posts with dates, titles, and links"
+      },
+      "management_team": {
+        "positions": [
+          "Commissioner",
+          "Permanent Secretary",
+          "Directorate Directors"
+        ]
+      },
+      "partners_contact": {
+        "description": "Partner references and helpline"
+      },
+      "google_map": {
+        "integration": "Integrate a google map"
+      },
+      "contact_footer": {
+        "address": "Block 10, Imo State Secretariat, Port Harcourt Rd, Owerri"
+      }
+    },
+    "About Us": {
+      "header": "consistent across all pages",
+      "breadcrumb": "Home > About Us",
+      "introduction": "Overview of the ministry's core responsibilities and mandate",
+      "vision_mission_values": "Official statements of organizational direction and ethics",
+      "meet_us_panel": "Contact details and physical address",
+      "map_widget": "Visual guide to ministry's location",
+      "footer": "consistent across all pages"
+    },
+    "Commissioner": {
+      "name": "Mr. Declan Emelumba"
+    },
+    "Department And Agencies": {
+      "header": "consistent",
+      "breadcrumb": "Home > Department",
+      "intro_paragraph": "Brief statement introducing the unit listings",
+      "departments_list": [
+        {
+            "name": "Finance and Accounts",
+            "description": "Ensures accountability for government resources, manages funds, and oversees financial stewardship."
+        },
+        {
+            "name": "Information",
+            "description": "Gathers, processes, and disseminates information on government policies, monitors media content, and collects public feedback."
+        },
+        {
+            "name": "New Media",
+            "description": "Leverages technology and social media to rapidly share verified information and keep the public updated through digital platforms."
+        },
+        {
+    "name": "Planning, Research, and Statistics",
+    "description": "Handles planning, research, data analysis, and procurement to support evidence-based decision-making."
+  },
+  {
+    "name": "Public Enlightenment and Orientation",
+    "description": "Conducts public campaigns, preserves government records, and informs citizens about government initiatives."
+  },
+  {
+    "name": "Strategy",
+    "description": "Develops and implements strategies that align departmental objectives with the Ministry’s overall mission."
+  }
+],
+      "imagery": "Likely includes visuals of staff/work settings as seen elsewhere on the site",
+      "footer": "consistent"
+    },
+    "Services": [
+      {
+        "name": "Government Publicity",
+        "description": "Disseminates news, policies, and official information from the State Government to the public through radio, TV, print, and online media."
+      },
+      {
+        "name": "Media Relations",
+        "description": "Coordinates press briefings, interviews, and statements on behalf of the Governor and State Executive Council."
+      },
+      {
+        "name": "Public Enlightenment Campaigns",
+        "description": "Runs campaigns to educate citizens on public health, environment, education reforms, voter registration, etc."
+      },
+      {
+        "name": "Strategic Communication Planning",
+        "description": "Crafts communication strategies to promote the government's image, counter misinformation, and improve public trust."
+      },
+      {
+        "name": "Crisis and Reputation Management",
+        "description": "Handles state responses to misinformation, protests, policy backlash, or emergencies through proactive media engagement."
+      },
+      {
+        "name": "Digital Media Monitoring",
+        "description": "Monitors social media and online platforms to gauge public sentiment and gather feedback for decision-making."
+      },
+      {
+        "name": "Publications and Print Services",
+        "description": "Manages the production of government bulletins, newsletters, gazettes, and press releases. Operates state-run print media like the *Statesman* newspaper."
+      },
+      {
+        "name": "Speech Writing and Messaging",
+        "description": "Prepares official speeches, talking points, and public addresses for the Governor and Commissioners."
+      },
+      {
+        "name": "Inter-Ministerial Liaison",
+        "description": "Works with other ministries (like Health, Environment, Education etc) to publish updates and ensure message consistency."
+      }
+    ],
+    "Projects": [
+      {
+        "name": "Digital Training for Journalists",
+        "description": "Organized workshops under the theme 'Upgrading Strategic Communication Competence in the Digital Era'. Designed to provide media professionals with necessary skills in digital tools and ICT for more accurate, modern reporting. Commissioner Declan Emelumba represented the government at these events.",
+        "imgSrc": "/images/journalists.webp"
+      },
+      {
+        "name": "Let's Talk TV Media Platform",
+        "description": "A television and online engagement platform based within the Imo Digital City. Used for talk shows, interviews, and public consultations, fostering direct connection between government and citizens.",
+        "imgSrc": "/images/lets_talk.png"
+      },
+      {
+        "name": "Partnership Engagements for Public Outreach",
+        "description": "The ministry supports collaborations with the military, DSS, and youth development agencies to conduct security awareness and youth orientation programs.",
+        "imgSrc": "/images/public_awareness.png"
+      },
+      {
+        "name": "SkillUpImo Communication Support",
+        "description": "Actively promotes the state's flagship youth empowerment initiative SkillUpImo, which is training thousands of Imolites in digital and Industry 4.0 skills. The Ministry manages public messaging, awareness campaigns, and coordinates coverage related to this agenda. Supports rollout events, press conferences, and collaboration with NGO and international partners such as UNDP and the University of California.",
+        "imgSrc": "/images/skill-up-imo.png"
+      }
+    ],
+    "News": {},
+    "Events": [
+      {
+        "name": "Digital Transformation Workshop",
+        "date": "2023-09-15",
+        "location": "Imo Digital City Conference Hall",
+        "description": "A comprehensive workshop on digital transformation strategies for government services.",
+        "time": "09:00 AM - 4:00 PM",
+        "organizer": "Imo State Ministry of Information Strategy",
+        "phone": "+234 800 123 4567",
+        "address": "Block 10, Imo State Secretariat, Port Harcourt Rd, Owerri"
+      },
+      {
+        "name": "Media Relations Training",
+        "date": "2023-10-20",
+        "location": "Ministry Headquarters",
+        "description": "Training session for media professionals on effective government-public communication.",
+        "time": "10:00 AM - 3:00 PM",
+        "organizer": "Imo State Ministry of Information Strategy",
+        "phone": "+234 800 123 4567",
+        "address": "Block 10, Imo State Secretariat, Port Harcourt Rd, Owerri"
+      }
+    ],
+    "Media": {},
+    "Contact Us": {
+      "social_media": {
+        "facebook": "https://www.facebook.com/profile.php?id=100085296764382"
+      }
+    }
+}
