@@ -38,9 +38,9 @@ export default function Home() {
       {/* <Stats /> */}
       {/* <FeaturedPartners /> */}
       <CTASection 
-        heading="Partner with Us Today!"
-        subtext={homeData.partners_contact.description}
-        buttonLabel="Contact Us"
+        heading="Together for an Informed Imo State"
+        subtext="Stay connected with the stories, policies, and strategies shaping our shared future."
+        buttonLabel="Contact Us" 
         buttonHref="/contact-us"
       />
       <Footer/>

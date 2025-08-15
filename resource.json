@@ -72,12 +72,12 @@
         {
             "name": "Information",
             "description": "Gathers, processes, and disseminates information on government policies, monitors media content, and collects public feedback.",
-            "imgSrc":"/images/information.jpg"
+            "imgSrc":"/images/information_department.jpeg"
         },
         {
             "name": "New Media",
             "description": "Leverages technology and social media to rapidly share verified information and keep the public updated through digital platforms.",
-            "imgSrc":"/images/new_media.jpg"
+            "imgSrc":"/images/new_media.png"
         },
         {
           "name": "Planning, Research, and Statistics",
@@ -87,12 +87,12 @@
         {
           "name": "Public Enlightenment and Orientation",
           "description": "Conducts public campaigns, preserves government records, and informs citizens about government initiatives.",
-          "imgSrc":"/images/public_enlightenment.jpg"
+          "imgSrc":"/images/public_enlightenment.png"
       },
       {
         "name": "Strategy",
         "description": "Develops and implements strategies that align departmental objectives with the Ministry’s overall mission.",
-        "imgSrc":"/images/strategy.jpg"
+        "imgSrc":"/images/strategy.webp"
       }
 ],
       "imagery": "Likely includes visuals of staff/work settings as seen elsewhere on the site",

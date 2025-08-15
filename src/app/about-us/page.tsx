@@ -27,7 +27,7 @@ export default function AboutUs() {
                 imgSrc="/images/building.png"
             />
             <CTASection 
-                heading="Partner with Us to Transform the Information and Communication sector in Imo State"
+                heading="Partner with Us to Transform the Information and Strategy sector in Imo State"
                 buttonLabel="See Our Projects"
                 buttonHref="/projects"
             />

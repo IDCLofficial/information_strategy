@@ -6,8 +6,8 @@ import { useState } from "react";
 
 const info = {
     logo: "/logo.png",
-    ministry: "Petroleum and Natural Gas Development",
-    description: "The Imo State Ministry of Petroleum & Natural Gas Development is the dedicated government body overseeing the management, policy formulation, and advancement of petroleum and natural gas resources in Imo State, Nigeria.",
+    ministry: "Information, Public Orientation and Strategy",
+    description: "The Imo State Ministry of Information, Public Orientation and Strategy is the State’s authoritative body for government communication and public engagement. The Ministry shapes policy, regulates operations, and manages strategic communication initiatives across the information and communication sector. It ensures transparent, lawful and responsible dissemination of information; combats misinformation; drives digital inclusion; and promotes equitable access to accurate, timely updates that benefit all citizens.",
     quickLinks: [
         {
             label: "Projects",
@@ -46,15 +46,15 @@ const info = {
     ],
     contact: [
         {
-            label: "Phone: No information",
+            label: "+234 706 839 4782",
             href: "/"
         },
         {
-            label: "Email: No information",
+            label: "ist@imostate.gov.ng",
             href: "/"
         },  
         {
-            label: "Ministry Address: No information",
+            label: "Block 10, Imo State Secretariat Complex, Owerri, Imo State, Nigeria",
             href: "/"
         },
     ]

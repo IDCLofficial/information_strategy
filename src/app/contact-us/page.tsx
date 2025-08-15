@@ -22,9 +22,9 @@ export default function ContactUsPage() {
         <ContactImageSection />
       </section>
       <CTASection 
-        heading="Partner with Us Today!"
-        subtext="Join us to create a properous future for Imo state, through Petroleum and natural gas development."
-        buttonLabel="Contact Us"
+        heading="Together for an Informed Imo State"
+        subtext="Stay connected with the stories, policies, and strategies shaping our shared future."
+        buttonLabel="Contact Us" 
         buttonHref="/contact-us"
       />
       <Footer />
