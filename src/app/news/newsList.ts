@@ -1,11 +1,6 @@
-type news = {
-  title: string,
-  date: string,
-  img: string,
-  badge: string,
-  desc: string
+import { contentfulService } from "../../../lib/contentful";
+
+export async function getNewsList(){
+  const newsList = await contentfulService.getBlogsByMinistry(process.env.NEXT_PUBLIC_CONTENTFUL_MINISTRY_ID!);
+  return newsList;
 }
-
-const newsList:news[] = [];
-
-export default newsList; 

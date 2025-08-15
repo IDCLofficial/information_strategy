@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { projects } from "./projects";
 import Link from "next/link";
+import { Project } from "../../../lib/types";
 
 
 const PROJECTS_PER_PAGE = 5;
 
-export default function ProjectsSection() {
+export default function ProjectsSection({projects}: {projects: Project[]}) {
     const [page, setPage] = useState(0);
     const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
     const start = page * PROJECTS_PER_PAGE;
@@ -27,7 +27,7 @@ export default function ProjectsSection() {
     return (
         <section className="w-full py-10 md:py-16 bg-white flex flex-col items-center gap-8 md:gap-22 px-4 md:px-8">
             {currentProjects.map((project) => (
-                <ProjectCard key={project.title} {...project} />
+                <ProjectCard key={project.sys.id} project={project as unknown as Project} />
             ))}
             <div className="flex gap-4 mt-6">
                 <button

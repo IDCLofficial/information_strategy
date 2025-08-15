@@ -3,8 +3,9 @@ import { use } from "react";
 import Image from "next/image";
 import ReadySection from "../../news/ReadySection";
 import Footer from "../../components/Footer";
-import events from "../eventsList";
+import getEvents from "../eventsList";
 import { useEffect, useState } from "react";
+import type { Events } from "../../../../lib/types";
 
 interface Speaker {
   img: string;
@@ -72,7 +73,8 @@ function Countdown({ eventDateTime }: { eventDateTime: string }) {
 
 export default function EventDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
-  const event = events.find(e => e.slug === slug);
+  const eventsList = (use(getEvents()) ?? []) as Events[];
+  const event = eventsList.find((e) => e.fields.eventName === slug);
   if (!event) {
     return (
       <div className="bg-white min-h-screen flex flex-col items-center justify-center">
@@ -82,13 +84,28 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
     );
   }
 
-  // Try to parse a full date+time string for countdown
-  // Fallback: just use event.date if event.time is missing
-  let eventDateTime = event.date;
-  if (event.time) {
-    // Try to parse a string like 'JUNE 15, 2025 8:00 am'
-    eventDateTime = `${event.date} ${event.time}`;
-  }
+  // Build a date-time string from available fields
+  const eventDateTime = `${event.fields.eventDate}`;
+
+  // Normalize basic fields used in the UI
+  const normalized = {
+    title: event.fields.eventName,
+    img: `https:${event.fields.bannerImage?.fields.file.url ?? ""}`,
+    description: event.fields.briefDescription,
+    date: event.fields.eventDate,
+    organizer: event.fields.ministry?.fields.ministryName ?? "",
+    address: event.fields.location ?? "",
+    time: "",
+    phone: event.fields.contactPhoneNumber ?? "",
+    speakers: [
+      ...(event.fields.firstSpeaker
+        ? [{ name: event.fields.firstSpeaker, role: "Speaker", img: `https:${event.fields.firstSpeakerPicture?.fields.file.url ?? ""}` }]
+        : []),
+      ...(event.fields.secondSpeaker
+        ? [{ name: event.fields.secondSpeaker, role: "Speaker", img: `https:${event.fields.secondSpeakerPicture?.fields.file.url ?? ""}` }]
+        : []),
+    ] as Speaker[],
+  };
 
   return (
     <div className="bg-white">
@@ -102,15 +119,15 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
         }}
       >
         <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold text-center z-10 drop-shadow-lg px-2">
-          {event.title}
+          {normalized.title}
         </h1>
       </section>
       {/* Event Image & Countdown */}
       <section className="relative w-full flex flex-col items-center pt-6 md:pt-12 pb-4 md:pb-6 px-4 md:px-20">
         <div className="w-full relative">
           <Image
-            src={event.img}
-            alt={event.title}
+            src={normalized.img}
+            alt={normalized.title}
             width={1920}
             height={600}
             className="object-cover w-full h-[180px] md:h-[480px] rounded-none"
@@ -121,25 +138,25 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
           </div>
         </div>
         <p className="text-gray-700 mt-6 mb-6 md:left text-sm md:text-base">
-          {event.description}
+          {normalized.description}
         </p>
       </section>
       {/* Event Details */}
       <section className="w-full max-w-6xl mx-auto px-4 mb-8 md:mb-12">
         <h2 className="text-lg md:text-2xl font-bold mb-2 md:mb-4">Event details</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 text-sm md:text-base">
-          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">DATE:</span> <span className="ml-2">{event.date}</span></div>
-          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">ORGANIZER:</span> <span className="ml-2">{event.organizer}</span></div>
-          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">ADDRESS:</span> <span className="ml-2">{event.address}</span></div>
-          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">TIME:</span> <span className="ml-2">{event.time}</span></div>
-          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">PHONE:</span> <span className="ml-2">{event.phone}</span></div>
+          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">DATE:</span> <span className="ml-2">{normalized.date}</span></div>
+          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">ORGANIZER:</span> <span className="ml-2">{normalized.organizer}</span></div>
+          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">ADDRESS:</span> <span className="ml-2">{normalized.address}</span></div>
+          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">TIME:</span> <span className="ml-2">{normalized.time}</span></div>
+          <div className="flex-row justify-between w-full items-center"><span className="font-semibold">PHONE:</span> <span className="ml-2">{normalized.phone}</span></div>
         </div>
       </section>
       {/* Speakers */}
       <section className="w-full max-w-6xl mx-auto px-4 mb-12 md:mb-16">
         <h2 className="text-lg md:text-2xl font-bold mb-4 md:mb-6">Speakers</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-          {(event.speakers && (event.speakers as Speaker[]).length > 0) ? (event.speakers as Speaker[]).map((sp, idx) => (
+          {(normalized.speakers && normalized.speakers.length > 0) ? normalized.speakers.map((sp, idx) => (
             <div key={idx} className="flex flex-col items-start bg-white rounded-xl shadow border border-gray-200 p-3 md:p-4">
               <div className="w-full h-40 md:w-full md:h-48 relative mb-2 md:mb-3 rounded-lg overflow-hidden">
                 <Image src={sp.img} alt={sp.name} fill className="object-cover" />

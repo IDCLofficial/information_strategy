@@ -1,11 +1,10 @@
-"use client";
+export const dynamic = 'force-dynamic';
 
 import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/app/components/Navbar";
 import PageTransitionWrapper from "@/app/components/PageTransitionWrapper";
-import Sidebar from "@/app/components/Sidebar";
-import { useState } from "react";
+ 
 
 const satoshiFont = localFont({
   src: [
@@ -37,14 +36,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <html lang="en">
       <body
         className={`antialiased ${satoshiFont.className}`}
       >
-        <Navbar onOpenSidebar={() => setSidebarOpen(true)} />
-        <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+        <Navbar />
         <PageTransitionWrapper>
           {children}
         </PageTransitionWrapper>

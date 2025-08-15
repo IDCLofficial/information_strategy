@@ -10,7 +10,7 @@ interface project {
 const projectsData = getProjectsData();
 
 // Create project objects from resource.json data
-export const projects:project[] = projectsData?.map((project: any) => ({
+export const projects:project[] = projectsData?.map((project) => ({
   title: project.name,
   image: project.imgSrc,
   status: "ongoing",

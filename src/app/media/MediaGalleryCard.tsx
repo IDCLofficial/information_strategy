@@ -5,11 +5,15 @@ interface MediaGalleryCardProps {
   image: string;
   title: string;
   isVideo?: boolean;
+  onClick?: () => void;
 }
 
-const MediaGalleryCard: React.FC<MediaGalleryCardProps> = ({ image, title, isVideo }) => {
+const MediaGalleryCard: React.FC<MediaGalleryCardProps> = ({ image, title, isVideo, onClick }) => {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col cursor-pointer transition hover:shadow-md">
+    <div
+      className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col cursor-pointer transition hover:shadow-md"
+      onClick={onClick}
+    >
       <div className="relative w-full h-48">
         <Image src={image} alt={title} fill className="object-cover" />
         {isVideo && (
@@ -28,4 +32,4 @@ const MediaGalleryCard: React.FC<MediaGalleryCardProps> = ({ image, title, isVid
   );
 };
 
-export default MediaGalleryCard; 
+export default MediaGalleryCard;

@@ -1,4 +1,3 @@
-// @ts-ignore
 import resourceData from "../../../resource.json";
 import { HomeData } from "../types/resource";
 

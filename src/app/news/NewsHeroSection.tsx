@@ -1,12 +1,12 @@
 "use client"
 import SearchBar from "../components/SearchBar";
 import { useState } from "react";
-import newsList from "./newsList";
 import Link from "next/link";
 import { SubsequentHero } from "../components/Hero";
 import { Title } from "../components/Title";
+import { NewsPost } from "../../../lib/types";
 
-export default function NewsHeroSection() {
+export default function NewsHeroSection({newsList}: {newsList: NewsPost[]}) {
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState<{ title: string; date: string } []>([]);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -19,10 +19,10 @@ export default function NewsHeroSection() {
       setShowDropdown(false);
       return;
     }
-    const filtered = newsList.filter(item =>
-      item.title.toLowerCase().includes(value.toLowerCase())
+    const filtered: NewsPost[] = newsList?.filter(item =>
+      item?.fields.title.toLowerCase().includes(value.toLowerCase())
     );
-    setResults(filtered);
+    setResults(filtered.map(item => ({ title: item?.fields.title, date: item?.sys.createdAt })));
     setShowDropdown(true);
   };
 
@@ -33,12 +33,12 @@ export default function NewsHeroSection() {
   };
 
   return (
-    <SubsequentHero className="bg-[url('/images/gradient.png')] bg-cover bg-center">
+    <SubsequentHero className="bg-[url('/images/projectsHero.png')] bg-cover bg-center">
       <div className="relative z-10 flex justify-center">
         <Title label="News" />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 md:px-0">
-        <h1 className="text-white text-3xl md:text-[3rem] md:text-5xl font-bold text-center leading-tight">
+        <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-center leading-tight">
           Stay Up to Date
         </h1>
         <div className="w-full flex flex-col items-center justify-center relative max-w-xl mx-auto">

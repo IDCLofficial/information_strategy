@@ -16,9 +16,9 @@ export default function EventsHeroSection() {
           initial={{ opacity: 1 }}
           animate={{}}
         >
-          {"Upcoming Events".split(" ").map((word: string, wordIdx: number, arr: string[]) => (
+          {"Upcoming Events".split(" ").map((word, wordIdx, arr) => (
             <span key={wordIdx} style={{ display: "inline-block", whiteSpace: "pre" }}>
-              {word.split("").map((char: string, charIdx: number) => (
+              {word.split("").map((char, charIdx) => (
                 <motion.span
                   key={charIdx}
                   initial={{ opacity: 0 }}
@@ -46,4 +46,4 @@ export default function EventsHeroSection() {
       </div>
     </SubsequentHero>
   );
-}
+} 

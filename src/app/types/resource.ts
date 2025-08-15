@@ -61,9 +61,24 @@ export interface ResourceData {
     name: string;
     description: string;
   }[];
-  News: {};
-  Events: {};
-  Media: {};
+  News: {
+    name: string;
+    description: string;
+  }[];
+  Events: {
+    name: string;
+    date: string;
+    location: string;
+    description: string;
+    time: string;
+    organizer: string;
+    phone: string;
+    address: string;
+  }[];
+  Media: {
+    name: string;
+    description: string;
+  }[];
   "Contact Us": {
     social_media: {
       facebook: string;

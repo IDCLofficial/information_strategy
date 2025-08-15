@@ -6,20 +6,26 @@ type service = {
     description: string
 }
 
-const servicesData = getServicesData();
+type ResourceService = {
+    name: string,
+    description: string,
+    img: string
+}
+
+const servicesData = getServicesData() as ResourceService[] | undefined;
 
 // Create service objects from resource.json data
-export const services:service[] = servicesData?.map((service: any) => ({
-    imgSrc: "/images/no_image.jpg",
-    title: service.name,
-    description: service.description
-})) || [];
+export const services: service[] = (servicesData ?? []).map((srv) => ({
+    imgSrc: srv.img,
+    title: srv.name,
+    description: srv.description
+}));
 
 // Fallback services if resource.json data is not available
 if (services.length === 0) {
     services.push(
         {
-            imgSrc: "/images/no_image.jpg",
+            imgSrc: "/images/megaphone-loudspeaker-making-announcement-vector.jpg",
             title: "Government Publicity",
             description: "Disseminates news, policies, and official information from the State Government to the public through radio, TV, print, and online media."
         },

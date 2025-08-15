@@ -9,10 +9,10 @@ export default function UnitsTabsSection() {
   const departmentsData = getDepartmentsData();
   
   // Create department objects from resource.json data
-  const departments = departmentsData?.departments_list?.map((department: { name: string; description: string; }) => ({
+  const departments = departmentsData?.departments_list?.map((department: { name: string; description: string; imgSrc: string; }) => ({
     name: department.name,
     description: department.description,
-    image: "/images/department-default.jpg"
+    image: department.imgSrc
   })) || [];
   
   const [activeIdx, setActiveIdx] = useState(0);

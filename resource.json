@@ -66,28 +66,34 @@
       "departments_list": [
         {
             "name": "Finance and Accounts",
-            "description": "Ensures accountability for government resources, manages funds, and oversees financial stewardship."
+            "description": "Ensures accountability for government resources, manages funds, and oversees financial stewardship.",
+            "imgSrc":"/images/finance.jpg"
         },
         {
             "name": "Information",
-            "description": "Gathers, processes, and disseminates information on government policies, monitors media content, and collects public feedback."
+            "description": "Gathers, processes, and disseminates information on government policies, monitors media content, and collects public feedback.",
+            "imgSrc":"/images/information.jpg"
         },
         {
             "name": "New Media",
-            "description": "Leverages technology and social media to rapidly share verified information and keep the public updated through digital platforms."
+            "description": "Leverages technology and social media to rapidly share verified information and keep the public updated through digital platforms.",
+            "imgSrc":"/images/new_media.jpg"
         },
         {
-    "name": "Planning, Research, and Statistics",
-    "description": "Handles planning, research, data analysis, and procurement to support evidence-based decision-making."
-  },
-  {
-    "name": "Public Enlightenment and Orientation",
-    "description": "Conducts public campaigns, preserves government records, and informs citizens about government initiatives."
-  },
-  {
-    "name": "Strategy",
-    "description": "Develops and implements strategies that align departmental objectives with the Ministry’s overall mission."
-  }
+          "name": "Planning, Research, and Statistics",
+          "description": "Handles planning, research, data analysis, and procurement to support evidence-based decision-making.",
+          "imgSrc":"/images/planning.jpg"
+        },
+        {
+          "name": "Public Enlightenment and Orientation",
+          "description": "Conducts public campaigns, preserves government records, and informs citizens about government initiatives.",
+          "imgSrc":"/images/public_enlightenment.jpg"
+      },
+      {
+        "name": "Strategy",
+        "description": "Develops and implements strategies that align departmental objectives with the Ministry’s overall mission.",
+        "imgSrc":"/images/strategy.jpg"
+      }
 ],
       "imagery": "Likely includes visuals of staff/work settings as seen elsewhere on the site",
       "footer": "consistent"
@@ -95,39 +101,48 @@
     "Services": [
       {
         "name": "Government Publicity",
-        "description": "Disseminates news, policies, and official information from the State Government to the public through radio, TV, print, and online media."
+        "description": "Disseminates news, policies, and official information from the State Government to the public through radio, TV, print, and online media.",
+        "img":"/images/megaphone-loudspeaker-making-announcement-vector.jpg"
       },
       {
         "name": "Media Relations",
-        "description": "Coordinates press briefings, interviews, and statements on behalf of the Governor and State Executive Council."
+        "description": "Coordinates press briefings, interviews, and statements on behalf of the Governor and State Executive Council.",
+        "img":"/images/AdobeStock_64463230_Preview.jpeg"
       },
       {
         "name": "Public Enlightenment Campaigns",
-        "description": "Runs campaigns to educate citizens on public health, environment, education reforms, voter registration, etc."
+        "description": "Runs campaigns to educate citizens on public health, environment, education reforms, voter registration, etc.",
+        "img":"/images/public_enlightenment.png"
       },
       {
         "name": "Strategic Communication Planning",
-        "description": "Crafts communication strategies to promote the government's image, counter misinformation, and improve public trust."
+        "description": "Crafts communication strategies to promote the government's image, counter misinformation, and improve public trust.",
+        "img":"/images/communication.png"
       },
       {
         "name": "Crisis and Reputation Management",
-        "description": "Handles state responses to misinformation, protests, policy backlash, or emergencies through proactive media engagement."
+        "description": "Handles state responses to misinformation, protests, policy backlash, or emergencies through proactive media engagement.",
+        "img":"/images/crisis-management-icon-monochrome-simple-260nw-2151736557.png"
       },
       {
         "name": "Digital Media Monitoring",
-        "description": "Monitors social media and online platforms to gauge public sentiment and gather feedback for decision-making."
+        "description": "Monitors social media and online platforms to gauge public sentiment and gather feedback for decision-making.",
+        "img":"/images/digital-media.png"
       },
       {
         "name": "Publications and Print Services",
-        "description": "Manages the production of government bulletins, newsletters, gazettes, and press releases. Operates state-run print media like the *Statesman* newspaper."
+        "description": "Manages the production of government bulletins, newsletters, gazettes, and press releases. Operates state-run print media like the *Statesman* newspaper.",
+        "img":"/images/publishing.png"
       },
       {
         "name": "Speech Writing and Messaging",
-        "description": "Prepares official speeches, talking points, and public addresses for the Governor and Commissioners."
+        "description": "Prepares official speeches, talking points, and public addresses for the Governor and Commissioners.",
+        "img":"/images/speech-writing.png"
       },
       {
         "name": "Inter-Ministerial Liaison",
-        "description": "Works with other ministries (like Health, Environment, Education etc) to publish updates and ensure message consistency."
+        "description": "Works with other ministries (like Health, Environment, Education etc) to publish updates and ensure message consistency.",
+        "img":"/images/handshake.png"
       }
     ],
     "Projects": [
@@ -137,19 +152,9 @@
         "imgSrc": "/images/journalists.webp"
       },
       {
-        "name": "Let's Talk TV Media Platform",
-        "description": "A television and online engagement platform based within the Imo Digital City. Used for talk shows, interviews, and public consultations, fostering direct connection between government and citizens.",
-        "imgSrc": "/images/lets_talk.png"
-      },
-      {
         "name": "Partnership Engagements for Public Outreach",
         "description": "The ministry supports collaborations with the military, DSS, and youth development agencies to conduct security awareness and youth orientation programs.",
         "imgSrc": "/images/public_awareness.png"
-      },
-      {
-        "name": "SkillUpImo Communication Support",
-        "description": "Actively promotes the state's flagship youth empowerment initiative SkillUpImo, which is training thousands of Imolites in digital and Industry 4.0 skills. The Ministry manages public messaging, awareness campaigns, and coordinates coverage related to this agenda. Supports rollout events, press conferences, and collaboration with NGO and international partners such as UNDP and the University of California.",
-        "imgSrc": "/images/skill-up-imo.png"
       }
     ],
     "News": {},
