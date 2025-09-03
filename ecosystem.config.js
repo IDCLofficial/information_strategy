@@ -5,7 +5,7 @@ module.exports = {
 
   deploy: {
     production: {
-      key: 'info.pem',
+      key: 'newi.pem',
       user: 'ubuntu',
       host: 'information',
       ref: 'origin/master',
