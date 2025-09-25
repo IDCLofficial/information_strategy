@@ -7,7 +7,7 @@ image: idclofficial/ministry_of_information_strategy
 # Deploy to these servers.
 servers:
   web:
-    - 3.250.137.128
+    - 15.237.252.202
 
 proxy:
   ssl: true
