@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/app/components/Navbar";
 import PageTransitionWrapper from "@/app/components/PageTransitionWrapper";
+import FloatingPromo from "@/app/components/FloatingPromo";
  
 
 const satoshiFont = localFont({
@@ -45,6 +46,7 @@ export default function RootLayout({
         <PageTransitionWrapper>
           {children}
         </PageTransitionWrapper>
+        <FloatingPromo />
       </body>
     </html>
   );

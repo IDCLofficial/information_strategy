@@ -1,9 +1,16 @@
 import type { NextConfig } from "next";
 
+const r2Domain = process.env.NEXT_PUBLIC_R2_ASSET_URL
+  ? new URL(process.env.NEXT_PUBLIC_R2_ASSET_URL).hostname
+  : "";
+
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["images.ctfassets.net"],
+    remotePatterns: [
+      { protocol: "https", hostname: "images.ctfassets.net" },
+      ...(r2Domain ? [{ protocol: "https" as const, hostname: r2Domain }] : []),
+    ],
   },
   // Optimize build performance and memory usage
   experimental: {

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const navLinks = [
+const navLinks: NavLink[] = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
     { label: "Departments", href: "/departments" },
@@ -13,12 +13,19 @@ const navLinks = [
     { label: "Events", href: "/events" },
     { label: "Media", href: "/media" },
     { label: "News", href: "/news" },
+    { label: "IMO @ 50", href: "/imo-at-50", highlight: true },
     { label: "Contact Us", href: "/contact-us" }
 ];
 
 interface NavLinksProps {
     mobile?: boolean;
     onClickLink?: () => void;
+}
+
+interface NavLink {
+    label: string;
+    href: string;
+    highlight?: boolean;
 }
 
 const NavLinks = ({ mobile = false, onClickLink }: NavLinksProps) => {
@@ -30,7 +37,7 @@ const NavLinks = ({ mobile = false, onClickLink }: NavLinksProps) => {
                     <li key={link.label}>
                         <Link
                             href={link.href}
-                            className={`hover:text-tertiary-green transition-colors duration-200 ${pathname.split("/")[1] === link.href.split("/")[1] ? "text-tertiary-green" : mobile ? "text-white font-semibold" : "text-white font-semibold"}`}
+                            className={`hover:text-tertiary-green transition-colors duration-200 ${pathname.split("/")[1] === link.href.split("/")[1] ? "text-tertiary-green" : mobile ? "text-white font-semibold" : "text-white font-semibold"} ${link.highlight ? "text-[#119156] hover:text-[#22C55E] font-bold" : ""}`}
                             onClick={onClickLink}
                         >
                             {link.label}
