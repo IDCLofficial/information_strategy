@@ -75,6 +75,11 @@
             "imgSrc":"/images/information_department.jpeg"
         },
         {
+          "name":"Library and Documentation",
+          "description":"The Library and Documentation Department serves as the central repository for government records, publications, and media archives. It preserves official policy documents, manages press releases, catalogs historical information, and provides reference materials to support public communication and administrative research.",
+          "imgSrc":"/images/library.jpg"
+        },
+        {
             "name": "New Media",
             "description": "Leverages technology and social media to rapidly share verified information and keep the public updated through digital platforms.",
             "imgSrc":"/images/new_media.png"
