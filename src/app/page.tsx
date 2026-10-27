@@ -8,6 +8,14 @@ import Footer from "@/app/components/Footer";
 import FeaturedInitiatives from "./components/FeaturedInitiatives";
 import FeaturedPartners from "./components/FeaturedPartners";
 import { getHomeData } from "@/app/data/resourceData";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: { absolute: "Ministry of Information & Strategy | Imo State Government" },
+  description: "Official website of the Ministry of Information & Strategy, Imo State Government: services, departments, projects, news and events.",
+  path: "/",
+});
+
 
 export default function Home() {
   const homeData = getHomeData();

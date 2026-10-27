@@ -4,6 +4,14 @@ import CTASection from "../components/CTASection";
 import ProjectsSection from "./ProjectsSection";
 import { contentfulService } from "../../../lib/contentful";
 import { Project } from "../../../lib/types";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Projects",
+  description: "Projects and programmes of the Ministry of Information & Strategy, Imo State Government.",
+  path: "/projects",
+});
+
 
 export default async function ProjectsPage() {
   const projects = await contentfulService.getProjectsByMinistryId(process.env.NEXT_PUBLIC_CONTENTFUL_MINISTRY_ID || "");

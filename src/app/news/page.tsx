@@ -4,6 +4,14 @@ import NewsGrid from "./NewsGrid";
 import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
 import { getNewsList } from "./newsList";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "News",
+  description: "Latest news, announcements and updates from the Ministry of Information & Strategy, Imo State.",
+  path: "/news",
+});
+
 
 export default async function NewsPage() {
   const newsList = await getNewsList();

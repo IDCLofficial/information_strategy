@@ -5,6 +5,11 @@ import "./globals.css";
 import { Navbar } from "@/app/components/Navbar";
 import PageTransitionWrapper from "@/app/components/PageTransitionWrapper";
 import FloatingPromo from "@/app/components/FloatingPromo";
+import type { Metadata } from "next";
+import { buildRootMetadata, jsonLd, organizationJsonLd } from "@/lib/seo";
+
+export const metadata: Metadata = buildRootMetadata();
+
  
 
 const satoshiFont = localFont({
@@ -42,6 +47,7 @@ export default function RootLayout({
       <body
         className={`antialiased ${satoshiFont.className}`}
       >
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(organizationJsonLd) }} />
         <Navbar />
         <PageTransitionWrapper>
           {children}

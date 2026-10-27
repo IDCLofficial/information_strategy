@@ -5,6 +5,14 @@ import CTASection from "../components/CTASection";
 import PastEvents from "./PastEvents";
 import getEvents from "./eventsList";
 import { Events } from "../../../lib/types";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Events",
+  description: "Events organised by the Ministry of Information & Strategy, Imo State Government.",
+  path: "/events",
+});
+
 
 export default async function EventsPage() {
   const events = await getEvents();

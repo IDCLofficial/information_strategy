@@ -5,6 +5,14 @@ import ContactFormSection from "./ContactFormSection";
 import ContactImageSection from "./ContactImageSection";
 import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Contact Us",
+  description: "Contact the Ministry of Information & Strategy, Imo State Government: office location and ways to reach the ministry.",
+  path: "/contact-us",
+});
+
 
 export default function ContactUsPage() {
   return (

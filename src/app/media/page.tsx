@@ -5,6 +5,14 @@ import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
 import getMedia from "./media";
 import { Media } from "../../../lib/types";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Media Gallery",
+  description: "Photo and media gallery of the Ministry of Information & Strategy, Imo State Government.",
+  path: "/media",
+});
+
 
 export default async function MediaPage() {
   const mediaItems = await getMedia();
