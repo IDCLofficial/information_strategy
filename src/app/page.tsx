@@ -11,8 +11,8 @@ import { getHomeData } from "@/app/data/resourceData";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: { absolute: "Ministry of Information & Strategy | Imo State Government" },
-  description: "Official website of the Ministry of Information & Strategy, Imo State Government: services, departments, projects, news and events.",
+  title: { absolute: "Imo State Ministry of Information, Public Orientation and Strategy" },
+  description: "Government publicity, media relations, public enlightenment campaigns and strategic communication for the Imo State Government.",
   path: "/",
 });
 

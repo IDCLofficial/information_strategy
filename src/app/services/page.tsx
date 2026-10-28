@@ -5,8 +5,8 @@ import ServicesSection from "./ServicesSection";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Services",
-  description: "Services offered by the Ministry of Information & Strategy of the Imo State Government.",
+  title: "Government Publicity, Media Relations and Communication",
+  description: "Government publicity, media relations, public enlightenment campaigns, strategic communication, digital media monitoring and publications for Imo State.",
   path: "/services",
 });
 

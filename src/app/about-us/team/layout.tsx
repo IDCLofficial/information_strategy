@@ -2,7 +2,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Our Team",
-  description: "Meet the team at the Ministry of Information & Strategy, Imo State Government.",
+  description: "Meet the team at the Ministry of Information, Public Orientation and Strategy, Imo State Government.",
   path: "/about-us/team",
 });
 
